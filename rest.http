@@ -5,8 +5,8 @@ POST http://localhost:3000/user/register/
 Content-Type: application/json
 
 {
-    "email": "huydsadsaddbdsadafds@gmail.com",
-    "password": "acb123"
+    "email": "addbdđsdddafds@gmail.com",
+    "password": "acdb123"
 }
 ################################
 POST http://localhost:3000/user/refresh-token
