@@ -4,6 +4,7 @@ const route = express.Router();
 
 const User = require('../Models/User.model');
 const {userValidate} = require('../helpers/validation')
+const {signAccessToken, verifyAccessToken, signRefreshToken} = require('../helpers/jwt_service')
 
 route.post('/register', async (req, res, next) => {
     try{
@@ -68,8 +69,13 @@ route.post('/login', async (req, res, next) => {
         if (!isValid) {
             throw createError.Unauthorized();
         }
-    
-        res.send(user)
+        
+        const accessToken = await signAccessToken(user._id);
+        const refreshToken = await signRefreshToken(user._id)
+        res.json({
+            accessToken,
+            refreshToken
+        })
     }
     catch(error) {
         next(error)
@@ -79,5 +85,19 @@ route.post('/login', async (req, res, next) => {
 route.post('/logout', (req, res, next) => {
     res.send('function logout')
 })
+
+route.get('/getlist', verifyAccessToken, async (req, res, next) => {
+    console.log(req.headers)
+    const listUsers = [
+        {
+            email: "abc@gmail.com"
+        },
+        { 
+            email: "bdc@gmail.com"
+        }
+    ]
+    res.json({listUsers});
+})
+
 
 module.exports = route;

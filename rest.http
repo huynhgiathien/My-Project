@@ -5,8 +5,8 @@ POST http://localhost:3000/user/register/
 Content-Type: application/json
 
 {
-    "email": "thiddsdsdsdsdssdsen@gmail.com",
-    "password": "acbđsdsd123"
+    "email": "thien@gmail.com",
+    "password": "abc123456"
 }
 ################################
 POST http://localhost:3000/user/refresh-token
@@ -15,9 +15,13 @@ POST http://localhost:3000/user/login/
 Content-Type: application/json
 
 {
-    "email": "aaaaaaa",
-    "password": "ddddđ"
+    "email": "thien@gmail.com",
+    "password": "abc123456"
 }
 
 ###############################
 POST http://localhost:3000/user/logout/
+
+###############################
+GET http://localhost:3000/user/getlist/
+Authorization: "Bearer e11e5ad0f5683edf4e3da133de8fe08dcb370683f44ebb026ef9a778633f5549"
