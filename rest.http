@@ -13,7 +13,7 @@ POST http://localhost:3000/user/refresh-token/
 Content-Type:  application/json
 
 {
-    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MDYyNDMsImV4cCI6MTY3MDA2Mzg0M30.OWD-Vyt_rKbWJik4sOiX4k8BnrexjRBpabflpDx6QQY"
+    "refreshToken":"seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MzQyMjQsImV4cCI6MTY3MDA5MTgyNH0.Y_kHWDXaJR6Me6M3bB6aSiche3F8-TBRJfkHTg2PN1c"
 }
 ###############################
 POST http://localhost:3000/user/login/
@@ -25,8 +25,12 @@ Content-Type: application/json
 }
 
 ###############################
-POST http://localhost:3000/user/logout/
+DELETE http://localhost:3000/user/logout/
+Content-Type: application/json
 
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MzQyMzEsImV4cCI6MTY3MDA5MTgzMX0.rhqjalXDGS0yf8BzpOIk5Nf98DtZTAtS9SyhxvCu31E"
+}
 ###############################
 GET http://localhost:3000/user/getlist/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MDc5NjMsImV4cCI6MTYzODUxMTU2M30.2FQPFdpj8w4u96eW7ZIYUCh8cwKY9st9Radw3wcgHcY
