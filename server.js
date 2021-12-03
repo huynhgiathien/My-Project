@@ -4,7 +4,15 @@ const UserRoute = require('./Routes/User.route')
 const createError = require('http-errors');
 const { urlencoded } = require('express');
 require('dotenv').config();
-// require('./helpers/connection_mongodb')
+
+const client = require('./helpers/connection_redis')
+
+client.set('Examaple', 'anyostich');
+client.get('Examaple', (err, result) => {
+    console.log(result)
+    if(err) throw createError.BadRequest();
+    console.log(result)
+})
 
 app.get('/', function (req, res, next) {
     res.send('Home page')

@@ -2,9 +2,10 @@ const express = require('express');
 const createError = require('http-errors');
 const route = express.Router();
 
+
 const User = require('../Models/User.model');
 const {userValidate} = require('../helpers/validation')
-const {signAccessToken, verifyAccessToken, signRefreshToken} = require('../helpers/jwt_service')
+const {signAccessToken, verifyAccessToken, signRefreshToken, verifyRefreshToken} = require('../helpers/jwt_service')
 
 route.post('/register', async (req, res, next) => {
     try{
@@ -48,8 +49,23 @@ route.post('/register', async (req, res, next) => {
 
 })
 
-route.post('/refresh-token', (req, res, next) => {
-    res.send('function refresh-token')
+route.post('/refresh-token', async (req, res, next) => {
+    try{
+        const {refreshToken} = req.body
+        if(!refreshToken){
+            throw createError.BadRequest();
+            
+        }
+        
+        const {userId} = await verifyRefreshToken(refreshToken);
+        const accessToken = await signAccessToken(userId);
+        const newRefreshToken = await signRefreshToken(userId);
+        res.json({accessToken, refreshToken:newRefreshToken});
+    }
+    catch(error)
+    {
+        next(error);
+    }
 })
 
 route.post('/login', async (req, res, next) => {

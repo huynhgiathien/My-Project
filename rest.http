@@ -9,7 +9,12 @@ Content-Type: application/json
     "password": "abc123456"
 }
 ################################
-POST http://localhost:3000/user/refresh-token
+POST http://localhost:3000/user/refresh-token/
+Content-Type:  application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MDYyNDMsImV4cCI6MTY3MDA2Mzg0M30.OWD-Vyt_rKbWJik4sOiX4k8BnrexjRBpabflpDx6QQY"
+}
 ###############################
 POST http://localhost:3000/user/login/
 Content-Type: application/json
@@ -24,4 +29,4 @@ POST http://localhost:3000/user/logout/
 
 ###############################
 GET http://localhost:3000/user/getlist/
-Authorization: "Bearer e11e5ad0f5683edf4e3da133de8fe08dcb370683f44ebb026ef9a778633f5549"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MDc5NjMsImV4cCI6MTYzODUxMTU2M30.2FQPFdpj8w4u96eW7ZIYUCh8cwKY9st9Radw3wcgHcY
