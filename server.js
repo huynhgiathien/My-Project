@@ -4,14 +4,16 @@ const UserRoute = require('./Routes/User.route')
 const createError = require('http-errors');
 const { urlencoded } = require('express');
 require('dotenv').config();
-const helmet = require('helmet')
+
+const logEvents = require('./helpers/logEvents');
+
+//const helmet = require('helmet')
+const morgan = require('morgan')
+
 const client = require('./helpers/connection_redis')
 
-const PORT = process.env.PORT || 3000;
-
-app.use(helmet());
-
-
+//app.use(helmet());
+app.use(morgan('common'));
 
 app.get('/', function (req, res, next) {
     res.send('Home page')
@@ -29,12 +31,14 @@ app.use((req, res, next) => {
 })
 
 app.use((error, req, res, next) => {
+    logEvents(`${req.url} ---  ${req.method} --- ${error.message}`)
     res.json({
         status: error.status || 500,
         message: error.message
     })
 })
 
+const PORT = process.env.PORT || 3000;
 
 
 app.listen(PORT, ()=>{
