@@ -4,15 +4,14 @@ const UserRoute = require('./Routes/User.route')
 const createError = require('http-errors');
 const { urlencoded } = require('express');
 require('dotenv').config();
-
+const helmet = require('helmet')
 const client = require('./helpers/connection_redis')
 
-client.set('Examaple', 'anyostich');
-client.get('Examaple', (err, result) => {
-    console.log(result)
-    if(err) throw createError.BadRequest();
-    console.log(result)
-})
+const PORT = process.env.PORT || 3000;
+
+app.use(helmet());
+
+
 
 app.get('/', function (req, res, next) {
     res.send('Home page')
@@ -36,7 +35,8 @@ app.use((error, req, res, next) => {
     })
 })
 
-const PORT = process.env.PORT || 3000;
+
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`)
 })

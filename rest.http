@@ -5,6 +5,9 @@ POST http://localhost:3000/user/register/
 Content-Type: application/json
 
 {
+    "name": "Thien",
+    "address": "78 Bà Hom, phường 13, quận 6",
+    "birthdate": "03/12/1999",
     "email": "thien@gmail.com",
     "password": "abc123456"
 }
@@ -20,6 +23,7 @@ POST http://localhost:3000/user/login/
 Content-Type: application/json
 
 {
+
     "email": "thien@gmail.com",
     "password": "abc123456"
 }
@@ -29,8 +33,11 @@ DELETE http://localhost:3000/user/logout/
 Content-Type: application/json
 
 {
-    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MzQyMzEsImV4cCI6MTY3MDA5MTgzMX0.rhqjalXDGS0yf8BzpOIk5Nf98DtZTAtS9SyhxvCu31E"
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmNzUxNzEzMGE4N2M1NTNiMzMzNmIiLCJpYXQiOjE2Mzg4ODk1NjIsImV4cCI6MTYzODg4OTg2Mn0.uW8jOEVVuDWgLhXQ4iem1Ik1tkxGnInCsoUiuIl9NaM"
 }
 ###############################
 GET http://localhost:3000/user/getlist/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE4YTRjNWE4YTI5YmQ0ZTE3ZGNjNzgiLCJpYXQiOjE2Mzg1MDc5NjMsImV4cCI6MTYzODUxMTU2M30.2FQPFdpj8w4u96eW7ZIYUCh8cwKY9st9Radw3wcgHcY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmNzUxNzEzMGE4N2M1NTNiMzMzNmIiLCJpYXQiOjE2Mzg4ODk1NjIsImV4cCI6MTYzODg4OTg2Mn0.uW8jOEVVuDWgLhXQ4iem1Ik1tkxGnInCsoUiuIl9NaM
+
+################################
+GET http://localhost:3000/user/getinfo

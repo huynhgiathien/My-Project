@@ -16,5 +16,6 @@ route.delete('/logout', UserController.logout)
 
 route.get('/getlist', verifyAccessToken, UserController.getlist)
 
+route.get('/getinfo', verifyAccessToken, UserController.getinfo)
 
 module.exports = route;

@@ -2,12 +2,13 @@ const User = require('../Models/User.model');
 const {userValidate} = require('../helpers/validation')
 const {signAccessToken,  signRefreshToken, verifyRefreshToken} = require('../helpers/jwt_service');
 const client = require('../helpers/connection_redis')
+const createError = require('http-errors');
 
 module.exports = {
     register: async (req, res, next) => {
         try{
-            const {email, password} = req.body;
-    
+            const {name, address, birthdate, email, password} = req.body;
+            console.log(name)
             // Check VALIDATION
             const {error} = userValidate(req.body);
             console.log(`error validation::: `, error)
@@ -22,6 +23,9 @@ module.exports = {
             }
             console.log(await User.findOne({}))
             const user = new User({
+                name: name,
+                address: address,
+                birthdate: birthdate,
                 email: email,
                 password: password
             });
@@ -81,8 +85,12 @@ module.exports = {
             const accessToken = await signAccessToken(user._id);
             const refreshToken = await signRefreshToken(user._id)
             res.json({
+                "status":"200",
                 accessToken,
-                refreshToken
+                refreshToken,
+                links: {
+                    current_user_info: "http://localhost:3000/user/getinfo"
+                }
             })
         }
         catch(error) {
@@ -105,7 +113,6 @@ module.exports = {
     },
 
     getlist: async (req, res, next) => {
-        console.log(req.headers)
         const listUsers = [
             {
                 email: "abc@gmail.com"
@@ -115,5 +122,20 @@ module.exports = {
             }
         ]
         res.json({listUsers});
+    }, 
+
+    getinfo: async (req, res, next) =>{
+        const {userId} = req.payload
+        const userInfo = await User.findById(userId)
+
+        res.json({
+            "status": "200",
+            userInfo: {
+                "name": userInfo.name,
+                "address": userInfo.address,
+                "birthdate": userInfo.birthdate,
+                "email": userInfo.email
+                }
+        });
     }
 }

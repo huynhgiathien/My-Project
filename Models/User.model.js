@@ -5,6 +5,18 @@ const bcrypt = require('bcrypt');
 const {testConnection} = require('../helpers/connection_multi_mongodb')
 
 const UserSchema = new schema ({
+    name: {
+        type: String, 
+        required: true,
+    },
+    address: {
+        type: String,
+        required: false,
+    },
+    birthdate: {
+        type: Date,
+        required: true,
+    },
     email: {
         type: String,
         lowercase: true,
