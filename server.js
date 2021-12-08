@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const UserRoute = require('./Routes/User.route')
+const BrandRoute = require('./Routes/Brand.route')
+const ProductRoute = require('./Routes/Product.route')
+const OrderRoute = require('./Routes/Order.route')
 const createError = require('http-errors');
 const { urlencoded } = require('express');
 require('dotenv').config();
@@ -21,7 +24,12 @@ app.get('/', function (req, res, next) {
 
 app.use(express.json());
 app.use(urlencoded({extended: true}));
+
+//List route
 app.use('/user', UserRoute);
+app.use('/brand', BrandRoute);
+app.use('/product', ProductRoute);
+app.use('/order', OrderRoute);
 
 app.use((req, res, next) => {
     // const error = new Error('Not Found');

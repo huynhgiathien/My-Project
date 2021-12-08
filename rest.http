@@ -25,7 +25,7 @@ Content-Type: application/json
 {
 
     "email": "thien@gmail.com",
-    "password": "abc123456"
+    "password": "abc123456swwss"
 }
 
 ###############################
@@ -41,3 +41,42 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmN
 ################################
 GET http://localhost:3000/user/getinfo
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmNzUxNzEzMGE4N2M1NTNiMzMzNmIiLCJpYXQiOjE2Mzg4OTA3NTYsImV4cCI6MTYzODg5NDM1Nn0.kJhh4dM9ys6C6ZzR9z2P5hSOmkDmeOpZSI9SjM0GwLE
+
+################################
+POST http://localhost:3000/brand/addbrand
+Content-Type: application/json
+
+{
+    "name": "Apple",
+    "country": "USA"
+}
+
+################################
+GET http://localhost:3000/brand/getlistbrand
+Content-Type: application/json
+
+############################### Add Product #############################
+POST http://localhost:3000/product/addproduct
+Content-Type: application/json
+
+{
+    "name": "Iphone 12",
+    "price": 20000000,
+    "brand_id": "BD0001",
+    "unitsinstock": 100,
+    "sold": 0
+}
+
+############################ Create order #############################
+POST http://localhost:3000/order/addOrder
+Content-Type: application/json
+
+{
+    "id_user": "61af7517130a87c553b3336b",
+    "item": [
+        {"id": "PD001", "price": 10000000, "quantity": 2}
+    ]
+
+    
+
+}

@@ -1,1 +1,66 @@
 Unauthorized07-12-2021	47:49:23--------------/user/login/ ---  POST --- Unauthorized
+08-12-2021	59:34:22--------------/brand/addbrand ---  GET --- This route does not exist!!!
+08-12-2021	21:35:22--------------/brand/addbrand ---  POST --- This route does not exist!!!
+08-12-2021	22:35:22--------------/brand/addbrand ---  POST --- This route does not exist!!!
+08-12-2021	23:35:22--------------/brand/addbrand ---  POST --- This route does not exist!!!
+08-12-2021	08:38:22--------------/user/login/ ---  POST --- Unauthorized
+08-12-2021	34:47:22--------------/brand/addbrand ---  POST --- len is not defined
+08-12-2021	27:51:22--------------/brand/addbrand ---  POST --- Invalid sort() argument. Must be a string, object, or array.
+08-12-2021	42:53:22--------------/brand/addbrand ---  POST --- Cannot read property 'id' of undefined
+08-12-2021	14:00:23--------------/brand/addbrand ---  POST --- Cannot read property 'length' of undefined
+08-12-2021	53:02:23--------------/brand/addbrand ---  POST --- Brand.save is not a function
+08-12-2021	15:03:23--------------/brand/addbrand ---  POST --- Brand.save is not a function
+08-12-2021	17:03:23--------------/brand/addbrand ---  POST --- Brand.save is not a function
+08-12-2021	46:03:23--------------/brand/addbrand ---  POST --- brand.save is not a function
+08-12-2021	48:03:23--------------/brand/addbrand ---  POST --- brand.save is not a function
+08-12-2021	48:03:23--------------/brand/addbrand ---  POST --- brand.save is not a function
+08-12-2021	51:16:23--------------/brand/getlistbrand ---  POST --- This route does not exist!!!
+08-12-2021	53:16:23--------------/brand/getlistbrand ---  POST --- This route does not exist!!!
+08-12-2021	54:16:23--------------/brand/getlistbrand ---  POST --- This route does not exist!!!
+08-12-2021	01:17:23--------------/brand/getlistbrand ---  GET --- This route does not exist!!!
+08-12-2021	02:17:23--------------/brand/getlistbrand ---  GET --- This route does not exist!!!
+08-12-2021	04:17:23--------------/brand/getlistbrand ---  GET --- This route does not exist!!!
+08-12-2021	04:17:23--------------/brand/getlistbrand ---  GET --- This route does not exist!!!
+09-12-2021	42:53:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	48:54:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	10:55:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	10:56:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	11:56:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	29:57:00--------------/order/addOrder ---  POST --- Unexpected token } in JSON at position 199
+09-12-2021	22:58:00--------------/order/addOrder ---  POST --- order is not defined
+09-12-2021	12:59:00--------------/order/addOrder ---  POST --- Cannot read property 'map' of undefined
+09-12-2021	31:00:01--------------/order/addOrder ---  POST --- Cannot read property 'map' of undefined
+09-12-2021	30:02:01--------------/order/addOrder ---  POST --- Cannot read property 'map' of undefined
+09-12-2021	29:04:01--------------/order/addOrder ---  POST --- Cannot read property 'length' of undefined
+09-12-2021	23:05:01--------------/order/addOrder ---  POST --- Cannot read property 'length' of undefined
+09-12-2021	21:06:01--------------/order/addOrder ---  POST --- Unexpected token o in JSON at position 1
+09-12-2021	36:06:01--------------/order/addOrder ---  POST --- Cannot read property 'length' of undefined
+09-12-2021	03:07:01--------------/order/addOrder ---  POST --- Unexpected token o in JSON at position 1
+09-12-2021	00:08:01--------------/order/addOrder ---  POST --- Unexpected token o in JSON at position 1
+09-12-2021	37:09:01--------------/order/addOrder ---  POST --- Product is not defined
+09-12-2021	05:10:01--------------/order/addOrder ---  POST --- Product is not defined
+09-12-2021	32:14:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	10:15:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	01:16:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	32:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	42:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	43:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	44:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	45:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	59:17:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	23:20:01--------------/order/addOrder ---  POST --- product validation failed: branch_id: Path `branch_id` is required.
+09-12-2021	30:21:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	13:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	15:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	44:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	45:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	58:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	59:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	59:22:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	00:23:01--------------/product/addproduct ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	41:24:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	42:25:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	44:25:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	00:27:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	41:28:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
+09-12-2021	10:30:01--------------/order/addOrder ---  POST --- product validation failed: brand_id: Path `brand_id` is required.
